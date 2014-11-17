@@ -49,7 +49,7 @@
 			if (window.less && window.less.Parser) {
 				parser.replace();
 			} else {
-				$.getScript("http://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js", parser.replace);
+				$.getScript("//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js", parser.replace);
 			}
 
 			var $style = $("<style />", {
@@ -66,7 +66,7 @@
 				type: "text/css",
 				href: (location.hostname.match("localhost") &&
 					document.title.match("Add CSS Bookmarklet")) ? "/addcss.css" :
-					"http://rocktronica.github.com/Add-CSS-Bookmarklet/addcss.min.css"
+					"//rocktronica.github.com/Add-CSS-Bookmarklet/addcss.min.css"
 			}).appendTo($container).on("load", function() {
 				$txt.focus();
 			});
@@ -232,7 +232,7 @@
 	if (window.jQuery === undefined || window.jQuery.fn.jquery < v) {
 		var done = false;
 		var script = document.createElement("script");
-		script.src = "http://ajax.googleapis.com/ajax/libs/jquery/" + v + "/jquery.min.js";
+		script.src = "//ajax.googleapis.com/ajax/libs/jquery/" + v + "/jquery.min.js";
 		script.onload = script.onreadystatechange = function(){
 			if (!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
 				done = true;
